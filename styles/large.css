@@ -1,0 +1,43 @@
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    /* Hide mobile menu on desktop */
+    .menu-btn {
+        display: none;
+    }
+
+    /* Show horizontal navigation */
+    .nav-links {
+        display: flex;
+        background-color: transparent;
+        padding: 0;
+        margin-top: 0;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
+    }
+
+    /* About section layout */
+    .about-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .student-photo {
+        margin-top: 0;
+    }
+
+    /* Filter buttons horizontal */
+    .filter-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Courses grid */
+    .courses-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

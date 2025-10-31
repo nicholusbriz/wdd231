@@ -3,10 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 231 - Web Frontend Development I | Course Home Page</title>
+    <meta name="description" content="WDD 231 Web Frontend Development I course home page">
+    <meta name="author" content="Nicholus Turyamureba">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-    <h1>we are in an orientation </h1>
-    <h2>hope this will work</h2>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/climate.svg" alt="Course Hub logo" width="40" height="40">
+                <span>Nicholus Turyamureba</span>
+            </div>
+            <button id="menu-btn" class="menu-btn" aria-label="Navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        
+        <section class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hey there! I'm Nicholus Turyamureba, a passionate software developer from Kampala, Uganda. I love building digital solutions and exploring new technologies.</p>
+                </div>
+                <section> class="student-photo">
+                    <h2>Student Photo</h2>
+                    <img src="images/atbriz-image.webp" alt="Nicholus Turyamureba" loading="lazy" width="300" height="300">
+                </section>
+            </div>
+        </section>
+
+        <section class="certificate-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="CSE">CSE</button>
+                <button class="filter-btn" data-filter="WDD">WDD</button>
+            </div>
+            
+            <div class="courses-list" id="courses-container">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
+            
+            <div class="credits-total">
+                <p>Total credits: <span id="total-credits">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.bing.com/ck/a?!&&p=dc698c446d7487841e2280a9a21b4459d640f89fe6c88ad0f3c857e6f31d8123JmltdHM9MTc2MTg2ODgwMA&ptn=3&ver=2&hsh=4&fclid=3ccd4ab2-f441-63d1-0b6a-5f16f5c36258&u=a1aHR0cHM6Ly9naXRodWIuY29tL25pY2hvbHVzYnJpeg" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            <a href="www.linkedin.com/in/nicholus-turyamureba-194363378" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+            <a href="https://www.facebook.com/professional_dashboard/?ref=profile_action" aria-label="LinkedIn">
+                <img src="images/facebook.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; <span id="currentyear"></span> Nicholus Turyamureba - Uganda</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
 </body>
 </html>
