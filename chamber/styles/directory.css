@@ -113,13 +113,16 @@ footer {
     padding: 1rem;
 }
 
-img {
+.card img {
     width: 100%;
-    height: auto;
-    border: 1px solid #fff;
-	box-shadow: 0 0 1rem #555;
-    border-radius: 20px;
-    padding: 10px;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0; /* Remove padding that causes overflow */
+    margin-bottom: 1rem;
 }
 
 .card {
