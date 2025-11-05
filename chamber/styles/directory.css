@@ -1,17 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
+/* chamber/styles/directory.css */
 header {
     display: flex;
     justify-content: space-between;
@@ -142,7 +129,7 @@ img {
 .menu {
     margin: 1rem auto;
     padding: 0.5rem;
-    background-color: #333;
+    background-color: #d8cbcb;
     text-align: center;
 }
 
@@ -175,7 +162,6 @@ h2 {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 1rem;
-    margin: 0;
     padding: 0.25rem;
     margin: 0.25rem 1rem;
 }
