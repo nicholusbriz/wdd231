@@ -63,7 +63,7 @@ const displayCards = (members) => {
         image.className = "image";
         image.loading = "lazy";
         image.width = 340;
-        image.height = 440
+        image.height = 440;
         image.src = member.image;
         image.alt = member.name;
         card.appendChild(image);
