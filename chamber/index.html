@@ -16,12 +16,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/uganda.webp" alt="Kampala Uganda Logo">
+            <img src="images/uganda.webp" alt="Kampala Uganda Logo" loading="lazy">
             <h1>Kampala Creators Chamber</h1>
         </div>
 
@@ -43,17 +43,41 @@
         <button id="nav-button" aria-label="Toggle navigation menu"></button>
     </header>
     
-    <main>
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/commerce.webp" alt="Chamber Hero Image">
+        <div class="hero-text">
+            <h1>Welcome to Kampala Chamber of Commerce</h1>
+            <p>Connecting businesses, empowering growth, building community.</p>
+            <a href="#join.html" class="cta-button">Join the Chamber</a>
+        </div>
+    </section>
 
-    <div class="menu">
-        <button id="grid">Grid</button>
-		<button id="list">List</button>
-    </div>
+    <!-- Current Events -->
+    <section class="events">
+    <h2>Upcoming Events</h2>
+        <ul>
+            <li>📅 Business Networking Night – Nov 20</li>
+            <li>📅 Tech Innovation Expo – Dec 5</li>
+            <li>📅 Annual Gala – Jan 15</li>
+        </ul>
+    </section>
 
-    <div id="container" class="container">
+    <!-- Weather -->
+    <section class="weather">
+        <h2>Local Weather</h2>
+        <div id="current-weather"></div>
+        <div id="forecast"></div>
+    </section>
 
-</div>
-    </main>
+    <!-- Spotlights -->
+    <section class="spotlights">
+        <h2>Member Spotlights</h2>
+        <div id="spotlight-container"></div>
+    </section>
+
+</main>
 
     <footer>
         <div class="location">
