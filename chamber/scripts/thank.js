@@ -1,7 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const now = new Date();
-    document.getElementById('timestamp').value = now.toISOString();
-});
+
 
 
 const userInput = window.location.search;

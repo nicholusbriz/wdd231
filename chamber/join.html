@@ -9,7 +9,7 @@
     <meta property="og:description" content="Connect with Kampala's top creative businesses and tech startups. Find services, join our network, and grow your business in Uganda's innovation hub.">
     <meta property="og:image" content="https://nicholusbriz.github.io/wdd231/chamber/images/atbriz.webp">
     <meta property="og:url" content="https://nicholusbriz.github.io/wdd231/chamber/directory.html">
-    <meta name="description" content="Explore Kampala's vibrant business community. Find creative agencies, tech startups, and local services. Join our chamber to connect and grow.">
+    <meta name="description" content="Join Kampala Creators Chamber today! Fill out our membership application form to connect with a vibrant community of creatives and tech innovators in Kampala, Uganda">
     <meta name="author" content="Nicholus Turyamureba (Atbriz)">
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -80,7 +80,7 @@
     </label>
 
     <label for="business">Business/ Organization's name
-        <input type="text" id="business-name" name="business" required 
+        <input type="text" id="business" name="business" required 
         autocomplete="organization" title="Please enter your business or organization's name.">
     </label>
 
@@ -110,7 +110,7 @@
 
     <section class="member-card">
     <p>Membership</p>
-    <section class="dialog-cards">
+    <div class="dialog-cards">
     <div class="member-card1">
         <p>Non Profit Membership Level</p>
         <button id="open-model1">Learn More</button>
@@ -136,7 +136,7 @@
         <button id="close">Close</button>
     </dialog>
 
-    </section>
+    </div>
 </section>
 </section>
 
@@ -171,6 +171,13 @@
         </div>
 
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const now = new Date();
+        document.getElementById('timestamp').value = now.toISOString();
+});
+    </script>
 
 </body>
 </html>
