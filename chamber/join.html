@@ -16,12 +16,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/uganda.webp" alt="Kampala Uganda Logo">
+            <img src="images/uganda.webp" alt="Kampala Uganda Logo" loading="lazy">
             <h1>Kampala Creators Chamber</h1>
         </div>
 
@@ -43,17 +43,104 @@
         <button id="nav-button" aria-label="Toggle navigation menu"></button>
     </header>
     
-    <main>
+<main>
+    
+<section class="join">
+    <section class="member-card">
+        <p>Membership Application Form</p>
 
-    <div class="menu">
-        <button id="grid">Grid</button>
-		<button id="list">List</button>
+<form method="get" action="thankyou.html">
+    <label for="firstname">First name
+        <input type="text" id="firstname" name="firstname" required 
+        autocomplete="given-name" title="Please enter your first name.">
+    </label>
+
+    <label for="lastname">Last name
+        <input type="text" id="lastname" name="lastname" required 
+        autocomplete="family-name" title="Please enter your last name.">
+    </label> 
+    
+    <label for="title">Organizational title
+        <input type="text" id="title" name="title" required
+        placeholder="e.g. Senior Project Manager" 
+        autocomplete="organization-title" title="Your organizational title within the organization" 
+        pattern="^[A-Za-z\- ]{7,}$">
+    </label>
+
+    <label for="email">Email address
+        <input type="email" id="email" name="email" required 
+        autocomplete="email" title="Please enter a valid email address." 
+        placeholder="...@gmail.com">
+    </label>
+
+    <label for="phone">Phone number
+        <input type="tel" id="phone" name="phone" required 
+        autocomplete="tel" title="Please enter your phone number." 
+        placeholder="+256 7XX XXX XXX">
+    </label>
+
+    <label for="business">Business/ Organization's name
+        <input type="text" id="business-name" name="business" required 
+        autocomplete="organization" title="Please enter your business or organization's name.">
+    </label>
+
+    <label for="membership-level">Membership Level:
+        <select id="membership-level" name="membership-level" required>
+            <option value="" disabled selected>Select your membership level</option>
+            <option value="np">NP Membership (Non-profit, no fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+        </select>
+    </label>
+
+    <label for="description">Business/ Organization's description
+        <textarea id="description" name="description" rows="4" cols="50" 
+        title="Please provide a brief description of your business or organization." 
+        placeholder="Describe your business..."></textarea>
+    </label>
+
+    <input type="hidden" id="timestamp" name="timestamp" value="">
+
+    <input type="submit" value="Apply For Membership">
+</form>
+
+    </section>
+
+
+    <section class="member-card">
+    <p>Membership</p>
+    <section class="dialog-cards">
+    <div class="member-card1">
+        <p>Non Profit Membership Level</p>
+        <button id="open-model1">Learn More</button>
     </div>
 
-    <div id="container" class="container">
+    <div class="member-card1">
+        <p>Bronze Membership Level</p>
+        <button id="open-model2">Learn More</button>
+    </div>
 
-</div>
-    </main>
+    <div class="member-card1">
+        <p>Silver Membership Level</p>
+        <button id="open-model3">Learn More</button>
+    </div>
+
+    <div class="member-card1">
+        <p>Gold Membership Level</p>
+        <button id="open-model4">Learn More</button>
+    </div>
+
+    <dialog id="dialog">
+        <div id="content"></div>
+        <button id="close">Close</button>
+    </dialog>
+
+    </section>
+</section>
+</section>
+
+</main>
 
     <footer>
         <div class="location">
@@ -84,5 +171,6 @@
         </div>
 
     </footer>
+
 </body>
 </html>

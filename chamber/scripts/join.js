@@ -1,55 +1,14 @@
-// Select HTML elements
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('figcaption');
-
-// Build the API URL
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=metric&appid=b04bc9c0224b9bdbe65c356cb38b2194';
-
-// Fetch and display weather data
-async function apiFetch() {
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data); // For testing
-      displayResults(data);
-    } else {
-      throw Error(await response.text());
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-function displayResults(data) {
-  currentTemp.innerHTML = `${data.main.temp}&deg;C`;
-  const iconCode = data.weather[0].icon;
-  const iconsrc = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-  const desc = data.weather[0].description;
-
-  weatherIcon.setAttribute('src', iconsrc);
-  weatherIcon.setAttribute('alt', desc);
-  captionDesc.textContent = desc;
-}
-
-apiFetch();
 
 
+const openButton1 = document.getElementById('open-model1');
+const openButton2 = document.getElementById('open-model2');
+const openButton3 = document.getElementById('open-model3');
+const openButton4 = document.getElementById('open-model4');
+const content = document.getElementById('content');
+const closeButton = document.getElementById('close');
+const dialog = document.getElementById('dialog');
 
-
-//Join Page Modal Script
-// scripts/join.js
-const dialog = document.getElementById('membershipDialog');
-const content = document.getElementById('membershipContent');
-const closeDialog = document.getElementById('closeDialog');
-
-const openModel1 = document.getElementById('openModel1');
-const openModel2 = document.getElementById('openModel2');
-const openModel3 = document.getElementById('openModel3');
-const openModel4 = document.getElementById('openModel4');
-
-openModel1.addEventListener('click', () => {
+openButton1.addEventListener('click', () => {
   content.innerHTML = `
     <h1>Non Profit Membership Level</h1>
     <p>The Basic Membership is designed for newcomers who want to start enjoying our community benefits at an affordable rate.</p>
@@ -64,7 +23,7 @@ openModel1.addEventListener('click', () => {
   dialog.showModal();
 });
 
-openModel2.addEventListener('click', () => {
+openButton2.addEventListener('click', () => {
   content.innerHTML = `
     <h1>Bronze Membership Level</h1>
     <p>The Bronze Membership is ideal for members who want more than the basics, with added value and recognition.</p>
@@ -77,10 +36,10 @@ openModel2.addEventListener('click', () => {
     </ul>
     <p>This level is perfect if you're ready to step up your involvement and enjoy extra privileges without a big commitment.</p>
   `;
-  dialog.showModal();
+    dialog.showModal();
 });
 
-openModel3.addEventListener('click', () => {
+openButton3.addEventListener('click', () => {
   content.innerHTML = `
     <h1>Silver Membership Level</h1>
     <p>The Silver Membership is designed for dedicated members who want enhanced benefits and recognition within the community.</p>
@@ -93,10 +52,10 @@ openModel3.addEventListener('click', () => {
     </ul>
     <p>This level is perfect if you're ready to invest more in your growth and enjoy a richer membership experience.</p>
   `;
-  dialog.showModal();
+    dialog.showModal();
 });
 
-openModel4.addEventListener('click', () => {
+openButton4.addEventListener('click', () => {
   content.innerHTML = `
     <h1>Gold Membership Level</h1>
     <p>The Gold Membership is crafted for committed members who want top-tier benefits, recognition, and exclusive opportunities.</p>
@@ -110,16 +69,10 @@ openModel4.addEventListener('click', () => {
     </ul>
     <p>This level is perfect if you're ready to enjoy premium privileges, deeper connections, and priority treatment across our community.</p>
   `;
-  dialog.showModal();
+    dialog.showModal();
 });
 
-closeDialog.addEventListener('click', () => {
+
+closeButton.addEventListener('click', () => {
   dialog.close();
-});
-
-// Close dialog when clicking outside
-dialog.addEventListener('click', (e) => {
-  if (e.target === dialog) {
-    dialog.close();
-  }
 });
