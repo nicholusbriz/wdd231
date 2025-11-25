@@ -3,6 +3,11 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: grid;
+    grid-template-areas: 
+        "visitor"
+        "attractions";
+    grid-template-columns: 1fr;
 }
 
 #visitor-message {
@@ -20,87 +25,10 @@
     display: grid;
     gap: 25px;
     grid-area: attractions;
+    grid-template-columns: 1fr;
 }
 
-/* Small screens (320px to 640px) */
-@media (max-width: 640px) {
-    .discover-main {
-        display: grid;
-        grid-template-areas: 
-            "visitor"
-            "attractions";
-        grid-template-columns: 1fr;
-    }
-    
-    #attractions-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .attraction-card {
-        grid-template-areas:
-            "title"
-            "image"
-            "address"
-            "description"
-            "button";
-    }
-}
-
-/* Medium screens (641px to 1024px) */
-@media (min-width: 641px) and (max-width: 1024px) {
-    .discover-main {
-        display: grid;
-        grid-template-areas: 
-            "visitor visitor"
-            "attractions attractions";
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    #attractions-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "card card"
-            "card card";
-    }
-    
-    .attraction-card {
-        grid-template-areas:
-            "title title"
-            "image image"
-            "address address"
-            "description description"
-            "button button";
-    }
-}
-
-/* Large screens (1025px and above) */
-@media (min-width: 1025px) {
-    .discover-main {
-        display: grid;
-        grid-template-areas: 
-            "visitor visitor visitor"
-            "attractions attractions attractions";
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    
-    #attractions-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "card card card"
-            "card card card";
-    }
-    
-    .attraction-card {
-        grid-template-areas:
-            "title title title"
-            "image image image"
-            "address address address"
-            "description description description"
-            "button button button";
-    }
-}
-
-/* Attraction Card Styles with Grid Areas */
+/* Attraction Card Base Styles */
 .attraction-card {
     background: white;
     border-radius: 12px;
@@ -109,6 +37,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: grid;
     gap: 15px;
+    grid-template-areas:
+        "title"
+        "image"
+        "address"
+        "description"
+        "button";
 }
 
 .attraction-card h2 {
@@ -132,15 +66,8 @@
     height: 200px;
     object-fit: cover;
     transition: all 0.3s ease;
-}
-
-/* Image Hover Effect - Only for larger views (not mobile) */
-@media (min-width: 641px) {
-    .attraction-card:hover img {
-        transform: scale(1.05);
-        filter: brightness(1.1) contrast(1.1);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
 }
 
 .attraction-card address {
@@ -181,13 +108,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Loading state for images */
-.attraction-card img {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-}
-
-/* Focus states for accessibility */
 .learn-more-btn:focus {
     outline: 3px solid #3498db;
     outline-offset: 2px;
@@ -196,6 +116,43 @@
 .attraction-card:focus-within {
     outline: 2px solid #3498db;
     outline-offset: 4px;
+}
+
+/* Image Hover Effect - Only for larger views (not mobile) */
+@media (min-width: 641px) {
+    .attraction-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(1.1) contrast(1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Medium screens (641px to 1024px) */
+@media (min-width: 641px) {
+    .discover-main {
+        grid-template-areas: 
+            "visitor visitor"
+            "attractions attractions";
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #attractions-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screens (1025px and above) */
+@media (min-width: 1025px) {
+    .discover-main {
+        grid-template-areas: 
+            "visitor visitor visitor"
+            "attractions attractions attractions";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    #attractions-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Additional responsive adjustments */
