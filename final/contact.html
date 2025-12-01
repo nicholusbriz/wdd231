@@ -38,13 +38,56 @@
         
     </header>
 
-    <main>
+  <main>
+    <section class="contact-section">
+    <h2>Let’s Work Together</h2>
+    <p>Fill out the form below to reach me for collaborations, project inquiries, or mentorship.</p>
 
-        <div id="projects-container" class="projects-container">
+    <form action="thanks.html" method="post" class="contact-form" id="contactForm">
+        <!-- First Name -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
 
-        </div>
+        <!-- Last Name -->
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
 
-    </main>
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Checkbox -->
+        <fieldset>
+        <legend>Areas of Interest:</legend>
+        <label>
+            <input type="checkbox" name="interest" value="webdev"> Web Development
+        </label>
+        <label>
+            <input type="checkbox" name="interest" value="design"> UI/UX Design
+        </label>
+        <label>
+            <input type="checkbox" name="interest" value="dj"> DJ & Creative Tech
+        </label>
+        </fieldset>
+
+        <!-- Select Options -->
+        <label for="project-type">Project Type:</label>
+        <select id="project-type" name="project-type" required>
+        <option value="">-- Select an option --</option>
+        <option value="personal">Personal Project</option>
+        <option value="business">Business Collaboration</option>
+        <option value="mentorship">Mentorship Request</option>
+        </select>
+
+        <!-- Description -->
+        <label for="description">Project Description:</label>
+        <textarea id="description" name="description" rows="5" placeholder="Describe your project or inquiry..." required></textarea>
+
+        <!-- Submit -->
+        <button type="submit">Send Message</button>
+    </form>
+    </section>
+</main>
 
 <footer>
     <div class="footer-section">

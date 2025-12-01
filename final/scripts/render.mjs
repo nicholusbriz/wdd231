@@ -1,23 +1,16 @@
-import { projects } from '../data/final.mjs';
+// render.mjs
+import { openModal } from './modal.mjs';
 
-// Function to create cards using forEach
-function renderProjectCards() {
+export function renderProjectCards(projects) {
     const container = document.getElementById('projects-container');
-    
-    // Clear container 
     container.innerHTML = '';
-    
-    // Use forEach loop to create cards
+
     projects.forEach(project => {
-        // Create card element
         const card = document.createElement('div');
         card.className = 'project-card';
-        
-        // Add data attribute for filtering
         card.setAttribute('data-category', project.category);
-        
-        // Build card HTML
-        const cardHTML = `
+
+        card.innerHTML = `
             <img src="${project.image}" alt="${project.name}" class="project-image" loading="lazy">
             <div class="project-content">
                 <h3>${project.name}</h3>
@@ -29,13 +22,17 @@ function renderProjectCards() {
                     <a href="${project.github_url}" target="_blank">GitHub</a>
                     <a href="${project.live_demo}" target="_blank">Live Demo</a>
                 </div>
+                <button class="details-btn">View Details</button>
             </div>
         `;
-        
-        card.innerHTML = cardHTML;
+
+        // Attach event to button
+        const detailsBtn = card.querySelector('.details-btn');
+        detailsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openModal(project);
+        });
+
         container.appendChild(card);
     });
 }
-
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', renderProjectCards);
