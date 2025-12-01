@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portforial Website</title>
     <link rel="icon" href="favicon.ico">
-    <meta name="description" content="Welcome to my personal portfolio website. Explore my projects, skills, and experiences.">
     <meta name="author" content="Nicholus Turyamureba (Atbriz)">
+    <meta property="og:title" content="Nicholus Turyamureba — Software & Web Developer">
+    <meta property="og:description" content="Explore the portfolio of Nicholus Turyamureba (Atb): full-stack projects, web apps, and design work focused on accessibility and responsive UI.">
+    <meta property="og:image" content="https://nicholusbriz.github.io/wdd231/final/images/nicholus.webp">
+    <meta property="og:url" content="https://nicholusbriz.github.io/wdd231/final/final.html">
+    <meta name="description" content="Portfolio of Nicholus Turyamureba (Atbriz) — software and web developer specializing in responsive, accessible websites and full-stack solutions. View projects, skills, and contact details.">
 
     <link rel="stylesheet" href="styles/final.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scripts/final.js" defer></script>
-    <script type="module" src="scripts/projects.js"></script>
 </head>
 <body>
+
     <header>
         <div class="logo">
             <img src="images/atbriz.webp" alt="Atbriz Logo" loading="lazy" width="100" height="100">
@@ -23,7 +28,7 @@
         <h1>Nicholus Turyamureba</h1>
         <nav>
             <ul class="nav-links" id="nav-links">
-                <li><a href="final.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -42,7 +47,7 @@
                 With expertise in both front-end and back-end technologies, I transform complex problems into elegant, efficient solutions.</p>
 
                 <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="contact.html" class="btn btn-outline">Get In Touch</a>
                 </div>
             </div>
@@ -79,12 +84,12 @@
     </div>
     
     <div class="footer-bottom">
-        <p>&copy; <span id="currentyear"></span> Nicholus Turyamureba. All rights reserved.</p>
-        <p>Last modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="date"></span> Nicholus Turyamureba. All rights reserved.</p>
+        <p>Last modified: <span id="last"></span></p>
         <a href="attributions.html" class="attribution-link">Attributions</a>
         <a href="https://youtube.com/your-video-demo" class="video-link">Project Video Demo</a>
     </div>
 </footer>
-</footer>
+
 </body>
 </html>
