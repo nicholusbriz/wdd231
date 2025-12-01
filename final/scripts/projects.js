@@ -18,7 +18,7 @@ function renderProjectCards() {
         
         // Build card HTML
         const cardHTML = `
-            <img src="${project.image}" alt="${project.name}" class="project-image">
+            <img src="${project.image}" alt="${project.name}" class="project-image" loading="lazy">
             <div class="project-content">
                 <h3>${project.name}</h3>
                 <p>${project.description}</p>
