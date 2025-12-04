@@ -430,8 +430,85 @@ footer > div:last-child {
     color: #2c6cb0;
 }
 
+/*Attributions page*/
+.attributions-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
+.attributions-section h1 {
+    color: #1a3c6e; /* Dark blue for good contrast on white */
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #2c6cb0;
+    font-size: 2rem;
+    text-align: center;
+}
 
+.attributions-section > p {
+    color: #333333; /* Dark gray for good contrast on white */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.attributions-section h2 {
+    color: #1a3c6e; /* Dark blue for good contrast on white */
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.attributions-section ul {
+    margin: 0 0 1.5rem 1.5rem;
+    padding: 0;
+}
+
+.attributions-section li {
+    color: #333333; /* Dark gray for good contrast on white */
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.attributions-section strong {
+    color: #1a3c6e; /* Dark blue */
+}
+
+.attributions-section a {
+    color: #1a3c6e; /* Dark blue for good contrast on white */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.attributions-section a:hover {
+    color: #2c6cb0; /* Slightly lighter blue on hover */
+}
+
+.note {
+    background-color: #f5f8fc; /* Very light blue */
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #2c6cb0;
+    margin-top: 2.5rem;
+}
+
+.note p {
+    color: #333333; /* Dark gray for good contrast on light blue */
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.note strong {
+    color: #1a3c6e; /* Dark blue */
+}
+
+#attribution-date {
+    color: #1a3c6e; /* Dark blue */
+    font-weight: 600;
+}
 
 @media screen and (max-width: 728px) {
     header {
@@ -482,5 +559,17 @@ footer > div:last-child {
     .hero-image img {
         width: 200px;
         height: 200px;
+    }
+
+    .attributions-section {
+        padding: 1.5rem;
+    }
+    
+    .attributions-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .attributions-section h2 {
+        font-size: 1.3rem;
     }
 }
