@@ -7,12 +7,12 @@
     <title>Personal Portforial Website</title>
     <link rel="icon" href="favicon.ico">
     <meta name="author" content="Nicholus Turyamureba (Atbriz)">
+    <meta name="description" content="Nicholus Turyamureba: Software & web developer specializing in responsive, accessible websites and full-stack solutions.">
     <meta property="og:title" content="Nicholus Turyamureba — Software & Web Developer">
     <meta property="og:description" content="Explore the portfolio of Nicholus Turyamureba (Atb): full-stack projects, web apps, and design work focused on accessibility and responsive UI.">
     <meta property="og:image" content="https://nicholusbriz.github.io/wdd231/final/images/nicholus.webp">
     <meta property="og:url" content="https://nicholusbriz.github.io/wdd231/final/final.html">
-    <meta name="description" content="Portfolio of Nicholus Turyamureba (Atbriz) — software and web developer specializing in responsive, accessible websites and full-stack solutions. View projects, skills, and contact details.">
-
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/final.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,10 +46,10 @@
                 <p>I'm a passionate software developer specializing in creating robust, scalable applications. 
                 With expertise in both front-end and back-end technologies, I transform complex problems into elegant, efficient solutions.</p>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="contact.html" class="btn btn-outline">Get In Touch</a>
-                </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="hero-btn primary-btn">View My Work</a>
+                <a href="contact.html" class="hero-btn outline-btn">Get In Touch</a>
+            </div>
             </div>
 
             <div class="hero-image">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="media">
-            <a href="https://github.com/nicholusbriz" aria-label="GitHub">
+            <a href="https://www.youtube.com/@Atbriz" aria-label="GitHub">
                 <img src="images/youtube-logo-2431.svg" alt="GitHub" width="24" height="24">
             </a>
             <a href="https://www.linkedin.com/in/nicholus-turyamureba-194363378" aria-label="LinkedIn">
@@ -84,8 +84,8 @@
     </div>
     
     <div class="footer-bottom">
-        <p>&copy; <span id="date"></span> Nicholus Turyamureba. All rights reserved.</p>
-        <p>Last modified: <span id="last"></span></p>
+        <p>&copy; <span id="currentyear"></span> Nicholus Turyamureba. All rights reserved.</p>
+        <p>Last modified: <span id="lastModified"></span></p>
         <a href="attributions.html" class="attribution-link">Attributions</a>
         <a href="https://youtube.com/your-video-demo" class="video-link">Project Video Demo</a>
     </div>

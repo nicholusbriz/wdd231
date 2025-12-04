@@ -1,25 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-    font-family: Roboto, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.6;
-    width: 100%;
-}
-
 header {
-    background-color: #4a90e2;
+    background-color: #2c6cb0;
     color: white;
     display: grid;
     grid-template-columns: auto 1fr auto; 
@@ -76,7 +56,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #f0f0f0;
     text-decoration: underline;
-    background-color: rgba(253, 242, 242, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
 
@@ -114,7 +94,7 @@ nav ul li a:hover {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
-    color: #4a90e2;
+    color: #2c6cb0;
 }
 
 .hero-div h3 {
@@ -136,18 +116,36 @@ nav ul li a:hover {
     gap: 2rem;
 }
 
-.hero-buttons a {
+.hero-btn {
     text-decoration: none;
-    background-color: #4a90e2;
-    color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: inline-block;
 }
 
-.hero-buttons a:hover {
-    background-color: #357abd;
+.primary-btn {
+    background-color: #2c6cb0;
+    color: white;
+    border: 2px solid #2c6cb0;
+}
+
+.outline-btn {
+    background-color: transparent;
+    color: #2c6cb0;
+    border: 2px solid #2c6cb0;
+}
+
+.primary-btn:hover {
+    background-color: #1e4d7a;
+    border-color: #1e4d7a;
+}
+
+.outline-btn:hover {
+    background-color: #2c6cb0;
+    color: white;
 }
 
 .hero-image {
@@ -206,7 +204,7 @@ nav ul li a:hover {
 
 .project-links a {
     margin-right: 10px;
-    color: #0077cc;
+    color: #2c6cb0;
     text-decoration: none;
 }
 .project-links a:hover {
@@ -216,14 +214,14 @@ nav ul li a:hover {
 .details-btn {
     margin-top: 10px;
     padding: 8px 12px;
-    background: #0077cc;
+    background: #2c6cb0;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 .details-btn:hover {
-    background: #005fa3;
+    background: #1e4d7a;
 }
 
 /* Modal Styles */
@@ -263,7 +261,7 @@ nav ul li a:hover {
 /* Footer styling */
 footer {
     display: block;
-    background-color: #4a90e2;
+    background-color: #2c6cb0;
     color: white;
     padding: 2rem 1rem;
 }
@@ -307,7 +305,7 @@ footer > div:last-child {
 
 .attribution-link,
 .video-link {
-    color: #ffdd00;
+    color: #ffff99;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -331,7 +329,7 @@ footer > div:last-child {
 /* Headings inside main */
 .contact-section h2 {
     margin-bottom: 1rem;
-    color: #0077cc;
+    color: #2c6cb0;
 }
 
 /* Form layout */
@@ -373,14 +371,14 @@ footer > div:last-child {
 .contact-form button {
     margin-top: 1.5rem;
     padding: 0.8rem;
-    background: #0077cc;
+    background: #2c6cb0;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 .contact-form button:hover {
-    background: #005fa3;
+    background: #1e4d7a;
 }
 
 
@@ -398,7 +396,7 @@ footer > div:last-child {
 
 /* Heading */
 .results h1 {
-    color: #0077cc;
+    color: #2c6cb0;
     margin-bottom: 1rem;
     font-size: 1.8rem;
     text-align: center;
@@ -429,7 +427,7 @@ footer > div:last-child {
     font-size: 0.95rem;
 }
 .results ul li strong {
-    color: #0077cc;
+    color: #2c6cb0;
 }
 
 
@@ -460,7 +458,7 @@ footer > div:last-child {
         top: 100%; 
         left: 0;
         right: 0;
-        background-color: #4a90e2;
+        background-color: #2c6cb0;
         padding: .5rem;
         border-radius: 0 0 8px 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -486,4 +484,3 @@ footer > div:last-child {
         height: 200px;
     }
 }
-

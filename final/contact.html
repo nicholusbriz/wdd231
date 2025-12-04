@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portforial Website</title>
+    <title>Contact Nicholus Turyamureba</title>
     <link rel="icon" href="favicon.ico">
-    <meta name="description" content="Welcome to my personal portfolio website. Explore my projects, skills, and experiences.">
     <meta name="author" content="Nicholus Turyamureba (Atbriz)">
-        <meta property="og:title" content="Nicholus Turyamureba — Web Developer Portfolio">
-        <meta property="og:description" content="Explore the portfolio of Nicholus Turyamureba (Atbriz): projects, skills, and contact information for a front-end developer focused on clean, accessible web experiences.">
-        <meta property="og:image" content="https://nicholusbriz.github.io/wdd231/final/images/nicholus.webp">
-        <meta property="og:url" content="https://nicholusbriz.github.io/wdd231/final/final.html">
-        <meta name="description" content="Portfolio of Nicholus Turyamureba (Atbriz) — web developer creating accessible, responsive websites. View projects, skills, and contact information.">
-
+    <meta name="description" content="Contact Nicholus Turyamureba for collaborations, project inquiries, or web development services.">
+    <meta property="og:title" content="Nicholus Turyamureba — Web Developer Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Nicholus Turyamureba (Atbriz): projects, skills, and contact information for a front-end developer focused on clean, accessible web experiences.">
+    <meta property="og:image" content="https://nicholusbriz.github.io/wdd231/final/images/nicholus.webp">
+    <meta property="og:url" content="https://nicholusbriz.github.io/wdd231/final/final.html">
     <link rel="stylesheet" href="styles/final.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -45,15 +44,15 @@
     <form  method="get" action="thanks.html" class="contact-form" id="contactForm">
         <!-- First Name -->
         <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="firstname" required>
+        <input type="text" id="fname" name="firstname" required title="Entre your firstname">
 
         <!-- Last Name -->
         <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lastname" required>
+        <input type="text" id="lname" name="lastname" required title="Entre your lastname">
 
         <!-- Email -->
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required title="Entre your email address">
 
         <!-- Checkbox -->
         <fieldset>
@@ -80,7 +79,7 @@
 
         <!-- Description -->
         <label for="description">Project Description:</label>
-        <textarea id="description" name="description" rows="5" placeholder="Describe your project or inquiry..." required></textarea>
+        <textarea id="description" name="description" rows="5" placeholder="Describe your project or inquiry..." required></textarea title="Entre your description">
 
         <!-- Submit -->
         <button type="submit">Send Message</button>

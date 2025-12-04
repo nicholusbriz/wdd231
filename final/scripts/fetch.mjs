@@ -8,4 +8,4 @@ export async function loadProjects(url) {
         console.error('Error fetching projects:', error);
         return [];
     }
-}
+};
